@@ -1,4 +1,7 @@
 function Profile(props){
+    const handleClick=(name)=>{
+        console.log("Viewing "+name)
+    }
     return(
         <>
          <ul>
@@ -6,7 +9,7 @@ function Profile(props){
             <li>Age : {props.age}</li>
             <li>course : {props.course}</li>
          </ul>
-         <button>click</button>
+         <button onClick={()=>handleClick(props.name)}>click</button>
         </>
     )
 }
